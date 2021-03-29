@@ -1,0 +1,112 @@
+1 il faut au préalable avoir installé NodeJS pour pouvoir travailler sur React en local 
+et vérifier que c'est bien installé via la commande 
+
+node -v 
+node --version
+
+2 lorsque vous avez installé nodejs 
+il y a un deuxième logiciel qui est installé en même temps : npm 
+
+npm pour Node Package Manager :
+	> télécharger des librairies supplémentaires dans votre projet 
+	> gestionnaire de dépendance (ce qui est téléchargé est compatible avec votre projet existant) 
+
+(équivalent de Composer pour le monde de PHP  => packagist)
+
+Vous pouvez le tester dans votre terminal 
+
+npm --version 
+
+=> npm va chercher les librairies sur le site https://www.npmjs.com/
+
+
+https://www.npmjs.com/package/create-react-app
+
+
+----- 
+
+npm qui permet de télécharger des packages (module / plugin / extension / librairie / framework) 
+
+outil en ligne de commande 
+
+npm i -g create-react-app 
+npm install --global create-react-app 
+
+
+
+=> vous installez votre package en local 
+npm i create-react-app 
+
+=> vous installez votre package en global
+npm i -g create-react-app 
+
+
+=> choix numéro 1 => librairie ne va être disponible que pour 1 seule projet (celui sur lequel vous travaillez)
+installé dans le dossier lequel vous êtes en train de travailler
+
+=> choix numéro 2 => librairie peut être réutilisé sur plusieurs projets 
+installé dans les dossiers dédiés au serveur Node
+
+astuce : même si la librairie est déjà installé chez vous en global
+npm i -g create-react-app va mettre à jour la librairie !! 
+
+
+MacOS : sudo npm i -g create-react-app 
+
+
+=>create-react-app outil en ligne de commande qui va permet de créer facilement un projet react
+
+create-react-app --version 
+
+-------------------------------
+
+node js 
+npm
+create-react-app
+
+OBLIGATOIRE
+
+-------------------------------
+
+dans Visual Studio Code => Simple react Snippet (écrire rapidement dans react imc )
+
+-------------------------------
+
+
+Dans visual studion sélectionner le dossier react (sur le bureau)
+Lancer un terminal
+
+
+create-react-app --version => bien installé 
+
+create-react-app jour1 => installer le projet react sur votre ordinateur 
+
+=> créer un dossier jour1
+=> qui contient package.json et yarn.lock (des fichiers de configuration qui contient où et qu'est qu'est ce que vous avez téléchargé !!)
+
+=> crée un dossier node_modules => l'ensemble des fichiers sources / dossier / packages qui permettent à  react (en local de fonctionner)
+
+-------------------------------
+
+un fois que le projet react est installé => 
+
+cd jour1
+yarn start 
+npm start 
+
+Facebook a cloné le projet npm et a créer son propre gestionnaire téléchargement et de package 
+
+yarn 
+Facebook a recréé le site où on télécharge les packages 
+
+https://classic.yarnpkg.com/lang/en/
+
+create-react-app => l'outil en ligne de commande va vous proposer de yarn à la place de npm 
+
+npm i -g yarn
+
+-------------------------------
+
+
+
+

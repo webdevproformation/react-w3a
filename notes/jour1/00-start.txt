@@ -1,0 +1,28 @@
+sur le bureau de votre ordinateur => 
+pouvez vous créer un dossier react 
+
+------------------------
+
+dans le dossier react => pouvez vous créer un sous dossier => notes
+
+j'ai déjà créé un autre dossier support 3WAcademy => récupérer tous les supports disponibles sur le Moodle de l'école 
+
+------------------------
+
+Tout ce que l'on va faire ensemble va être partagé sur un dépo github que je vais créer d 'ici la pause café !
+
+------------------------
+
+Malik HARRIZ
+malik.h@webdevpro.net
+
+------------------------
+
+dans la barre d'adress de votre navigateur 
+
+https://formation.webdevpro.net/react/
+login : react 
+mdp : js 
+(attention login et mot de passe sont en minuscule)
+
+

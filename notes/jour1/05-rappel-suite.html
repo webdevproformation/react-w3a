@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // version 6 de javascript (sortie en 2015)
+        // nouvelle manière de créer des fonctions 
+
+        // méthode classique : 1
+        function a(){ 
+
+        }
+
+        // méthode classique de créer des fonctions 
+
+        const b = function(){
+
+        }
+        // créer une variable b et stocker dedans une fonction anonyme
+
+        // nouvelle manière de faire des fonctions 
+        // fonction fléchée / arrow function 
+
+        const c = () => {}
+
+        // remarque sur cette nouvelle manière de créer des fonctions 
+
+        // 0 paramètre vous devez mettre les ()
+        const d = () => {}
+
+        // 1 paramètre => les parenthèses sont facultatives 
+
+        const e = largeur => {}
+        const f = (largeur) => {}
+
+        // si vous avez plus que 1 paramètre dans la fonction les parenthèses redeviennent obligatoires
+
+        const g = (largeur, hauteur) => {}
+
+        // si la fonction fléchée contient 1 seule instruction elle fait automatiquement un return ET pas besoin de mettre des accolades 
+
+        let h = ( chiffre1 , chiffre2 ) => {
+            return chiffre1 + chiffre2 ;
+        }
+
+        let i = ( chiffre1 , chiffre2 ) => chiffre1 + chiffre2 ;
+
+        let j = ( chiffre1 , chiffre2 ) => {
+            chiffre1 + chiffre2 ;
+        }
+        console.log(h(1,2)); // 3
+        console.log(i(1,2)); // 3 
+        console.log(j(1,2)); // undefined
+
+        let k = largeur => largeur * 5 ;
+        
+
+        function test( b ){
+            console.log("action1");
+            b();
+        }
+
+        test( function(){
+            console.log("callback");
+        } ) // appel une fonction
+        // création de fonction comme argument lors de l'appel d'une autre fonction 
+        // programmation asynchrone 
+
+        test( () => { 
+            console.log("je suis une arrow function");
+        }) ;
+
+
+        // créer une tableau 
+        let l = [ 1, 2, 3] ;
+        // pour parcourir un tableau il existe plusieurs techniques 
+
+        for(let i = 0 ; i < l.length ; i++){
+            console.log(l[i]);
+        }
+
+        let compteur = 0 ;
+        while(compteur < l.length){
+            console.log(l[compteur]);
+            compteur++;
+        }
+
+        // méthodes sur l'objet array : .forEach( callback )
+        // per
+        l.forEach(item => console.log( item ));
+
+        // méthode sur l'objet array : .map( callback )
+        // le callback dans la méthode .map() DOIT retourner une information
+
+        let resultat = l.map( function( item ){ 
+            return item ; 
+        } );
+
+        console.log(resultat);
+
+        // Avantage de la méthode map() 
+
+        // transformer une tableau en un autre 
+
+        // tableau origine [1 , 2 , 3]
+        // tableau enrichi grâce à la méthode map ["<li>1</li>" , "<li>2</li>" , "<li>2</li>"]
+
+        let tableauEnrichi = [1,2,3].map( item => {  
+            return "<li>" + item + "</li>";
+        });
+
+        console.log(tableauEnrichi);
+
+        let tableauEnrichi2 = [1,2,3].map( item => "<li>" + item + "</li>" );
+
+        console.log(tableauEnrichi2);
+
+        // programmation fonctionnelle
+
+                // filtrer() mon tableau tout sauf le 2 
+                // enrichir avec la méthode map()
+        let t = [1, 2, 3].filter( item  => { if (item == 2) return item }  ).map( item => "<p>"+ item + "</p>" );
+
+        console.log(t);
+
+        // descructuration 
+
+        let person = {
+            nom : "Pierre",
+            hello : function(){
+                console.log("bonjour");
+            },
+            salut(){
+                console.log("au revoir");
+            }
+        };
+
+        console.log(person.nom);
+        person.hello(); 
+        // desctructuration d'un objet 
+        let { nom , salut } = person ; // extract()
+
+        salut();
+        console.log(nom);
+
+        let {nom : prenom } = person ; // descructuration et renommer une variable issue de la descruturation
+        console.log(prenom);
+
+
+        function calcul ( objet ){
+            let resultat = objet.largeur * objet.hauteur ;
+            console.log(resultat);
+        }
+        // destructucturation 
+        function calcul2 ( {largeur , hauteur} ){
+            let resultat = largeur * hauteur ;
+            console.log(resultat);
+        }
+
+        let o = { largeur : 12 , hauteur : 30 } ;
+        calcul2( o );
+
+    </script>
+</body>
+</html>

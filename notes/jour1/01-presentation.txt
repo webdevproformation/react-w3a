@@ -1,0 +1,80 @@
+REACT, React, React JS, React.js => renvoie toujours à la même librairie 
+
+=> Librairie créée par des équipes de Facebook en 2011
+=> certainement la librairie pour réaliser des applications Front End 
+la PLUS appréciée
+
+Le site officiel pour la documentation : https://fr.reactjs.org/
+
+les autres librairies pour faire du front end
+
+https://javascript.developpez.com/actu/306503/Quels-sont-les-frameworks-JavaScript-que-vous-aimeriez-apprendre-en-2020-Voici-quelques-propositions-qui-sont-tributaires-des-cas-d-utilisations/
+
+
+--------------------------
+--------------------------
+
+élément de base de React => Composant (brique de base de React) 
+chaque composant est autonome
+
+un Composant => une partie de ce que vous allez voir dans un écran 
+=> Composant Menu de la page
+=> Composant Articles => afficher la liste des article  
+=> Composant Article => afficher 1 seul Article 
+
+=> tout application React dispose d'une composant spécial => composant racine
+composant root => ce composant qui contient TOUS les autres composants 
+que l' on va voir un écran 
+
+
+PHP => 100% du travail qui va être effectué côté serveur 
+
+=> Navigateur => https://monsite.fr => serveur (Symfony PHP ) => répondre
+=> Navigateur
+
+----- 
+
+1er appel 
+JS React / Angular => Navigateur => https://monsite.fr  => serveur 1 (React) => serveur NodeJS => Navigateur 
+
+
+JS React / Angular => Navigateur => https://monsite.fr/article2 => serveur NodeJS => Navigateur 
+rafraichir la partie qui est nouvelle 
+
+=> gagner en vitesse exécution !! 
+=> Composant (créer des balises html sur mesure)
+=> JSX  => très partique facilemet maintenable 
+
+----- 
+
+// voici un exemple de composant  NavBar (barre de menu)
+SOLID :
+S ingle 
+O pen Close => 
+L 
+I => OUI diviser pour mieux régner
+D => Dépendency => Interface par contre en Typescript Oui 
+Mais en javascript NON on peut pas créer d'interface
+
+-----
+
+import React, { Component } from "react";
+
+class NavBar extends Component {
+  state = {}; // state => données internes du composant facultative 
+  render(){} // méthode OBLIGATOIRE => ce qui est affiché à l'écran 
+}
+
+-----
+
+Angular un framework => une fois installée vous n'avez plus besoin d'installer autre chose
+
+React une librairie => ne sait gérer que l'affichage / il va falloir ajouter des extensions / packages en plus 
+
+React est plus léger que Angular 
+
+-----
+
+
+
+

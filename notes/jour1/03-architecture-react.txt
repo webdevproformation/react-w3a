@@ -1,0 +1,69 @@
+node_modules => toutes les dépendances de votre projet React 
+            => on ne met pas les mains dedans 
+            => uniquent en saisissant des commandes via le terminal 
+
+public 
+    favicon 
+    index.html => <div id="root"></div>
+
+    serveur de préproduction / de développement 
+    Webpack => outil qui permet bundliser (regrouper) tous les fichiers dans un seul et optimiser et ajout des balises script en dynamique par le serveur webpack !! 
+
+    pour info => image à afficher dans votre application => dans ce dossier qu'il faudra les stocker !
+
+    manifest.json => fichier PWA : Progressive Web App 
+    => permet de transformer un site internet / application (créé via React)
+    => application mobile 
+    => chrome => https:// => souhaitez vous l'installer comme application 
+
+    => pwa ne fonctionne sur Chrome 
+    => https://www.youtube.com/watch?v=4XT23X0Fjfk ( 15 - 20 )
+    => pwa ne fonctionne plus sur  Firefox
+
+
+Tout ce que vous allez coder va être injecté dans cette balise (React)
+
+dernier dossier src : ( source )
+
+Dans ce dossier que l'on va travailler ( modifier / créer / supprimer )
+
+
+Composer 
+
+
+require("../vendor/autoload.php");
+
+
+src 
+    index.js  liaison entre public/index.html ET src/App.js (composant racine)
+    App.js (dans le composant racine) 
+    
+React (Angular/ Vue.js / Svelte) => SPA : Single Page Application 
+créer une page contact 
+=> html => créer dans le dossier public => nouveau fichier contact.html 
+
+NON 
+
+=> créer une nouveau fichier dans le dossier src => Contact.js / Contact.jsx
+=> et c'est REact qui va injecter le Composant (qui contient la page) dans la balise <div id="root"></div> 
+
+associée => 
+
+Page contact  => 
+    intro => 
+    formulaire
+        input email
+        textarea => commentaire
+        button 
+
+
+
+HMR : WebPack Hot Module Reload => dès que vous modifiez fichier dans App.js 
+automatiquement mis à jour dans le navigateur !! 
+
+=> en cas d'erreur de syntaxe affichage clair où est l'erreur 
+
+=> UX => User eXpérience 
+=> DX => Développement eXpérience 
+
+

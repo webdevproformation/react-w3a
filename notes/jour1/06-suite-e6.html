@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // spread opérator 
+
+        // cloner une variable 
+
+        let a = [1,2,3];
+        let b = [4,5, 6];
+        // concaténer tableau a et b 
+
+        let c = [ ...a , ...b]; // ... variable => spread opérator 
+        console.log(c);
+
+        function calcul (...chiffres){ // crée une fonction dont le nombre argument est inconnu
+                console.log(chiffres.reduce( (increment , value) => { return increment + value }  )) ;
+
+        }
+
+        calcul(1,2);
+        calcul(1,2,3,4,5);
+
+        // cloner une variable 
+
+        let d = ["bonjour", "les amis"];
+        let e = d ;
+        let f = [...d]; // cloner un tableau => state 
+
+        d.push("comment allez vous ");
+
+        console.log(e); // [ "bonjour", "les amis", "comment allez vous " ]
+        console.log(f); // [ "bonjour", "les amis"] 
+        // React comparer les données au debut et à la fin => mis à jour QUE les informations modifiées 
+
+        class Etudiant{
+            nom = "Alain" ;
+            age = 22 ;
+            constructor(formation){
+                this.formation = formation;
+            }
+            action1 = function(){
+                console.log("action 1");
+            }
+            action2(){
+                console.log("action 2");
+            }
+        }
+
+        let etudiant = new Etudiant("React") ;
+        console.log(etudiant);
+
+        // héritage 
+        class PremierAnnee extends Etudiant{
+
+        }
+
+        let premier = new PremierAnnee("techno Front End")
+        console.log(premier);
+
+        // héritage et surcharge (modifier la class parente)
+
+        class DeuxiemeAnnee extends Etudiant{
+            constructor( formation , niveau ){
+                super(formation); // attention vous deevz mettre super comme 1ère instruction dans l
+                this.niveau = niveau ;
+            }
+        }
+
+        let deuxieme = new DeuxiemeAnnee( "techno Back" , "élevé" );
+        console.log(deuxieme);
+
+        // POO avec la syntaxe ES6 
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+aller dans le dossier jour1/src 
+
+Premier.jsx 
+
+Exo :
+créer un composant qui s'appelle Deuxieme 
+et ce composant doit afficher le texte suivante dans votre application
+
+<p>Je suis le deuxième composant !</p>
+
+les composants doivent OBLIGATOIREMENT avoir une balise parent unique 
+<div></div>
+<></>
+<React.Element></React.Element>
+
+en html balise orphaline => balises html qui n'utilisent que la balise ouvrante 
+cette syntaxe est valide en html5 mais pas valise en jsx 
+
+<img src="" alt="" >
+<br>
+<hr>
+<input type="text" >
+
+il faut ajouter un / à la fin de la balise (pour fermer la balise)
+
+<img src="" alt="" />
+<br />
+<hr />
+<input type="text" />
+
+// mot clé réservé 
+
+<p class="introduction"></p>
+<p className="introduction"></p>
+
+----
+
+<label for="nom">nom</label> 
+<input type="text" id="nom">
+
+<label htmlFor="nom">nom</label> 
+<input type="text" id="nom">
+
+
+----- 
+
+Afficher des données stockées dans notre composant => 
+
+Quatrieme 
+
+
+-----  créer un 5ème composant  Nom Cinquieme
+
+state stocker les informations suivantes 
+    titre : "Premier article"
+    contenu : lorem ipsum
+    like : 12 
+
+dans le render 
+
+    <article>
+        <h2>Premier article</h2>
+        <p>lorem ipsum</p>
+        SI le nombre de like <= 10  =>
+        <span class="new">chiffre</span>  
+        SI le nombre de like > 10  =>  
+        <span class="hot">chiffre</span>    
+    </article>
+dans un fichier css à part vous allez ajouter deux class 
+.hot texte rouge
+new texte de couleur verte 
+

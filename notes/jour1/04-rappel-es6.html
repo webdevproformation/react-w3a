@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1ère section 
+        // si vous créez des variables => let et const 
+        // ne plus utiliser le mot clé var 
+
+        /* let a = 12 ;
+
+        function a(){
+            return "bonjour";
+        } */
+
+        // javascript va vérifier que vous déclarez et créer plusieurs fois la même variable 
+
+        // 2ème section  objet littéral
+
+        let voiture = { 
+            marque : "Peugeot" , // propriété
+            bruit : function(){ // méthode 
+                console.log("vroum"); 
+            },
+            info(){ // nouvelle syntaxe ES6 pour créer une méthode
+                console.log("je suis une voiture"); 
+            }
+        };
+
+        // utiliser les méthodes stockées dans l'objet voiture 
+
+        voiture.bruit();
+        let action = "info" ;
+        voiture[action](); // syntaxe utile pour le traitement des formulaires dans React !! 
+
+        // this => renvoie à l'instance qui appelle la fonction 
+
+        let person = {
+            nom : "Alain",
+            description(){
+                console.log(this);
+                console.log( this.nom + " est mon nom");
+            },
+            description2 : () => { 
+                    console.log(this);
+                }
+        }
+
+        person.description();
+
+        let phrase = person.description ; // événement dans React 
+        console.log(phrase);
+
+        phrase() ; // this.nom au lieu Alain => undefined 
+        //  this = window qui ne possède pas de propriété nom  
+
+        // perte de contexte pour le mot clé this 
+
+        // 2ème manières pour redonner un contexte à this :
+
+        // au moment où on créer la variable qui contient notre fonction 
+        let phrase2 = person.description.bind(person) ; 
+        // bind => associé / lier 
+        phrase2();
+
+        let phrase3 = person.description2 ;
+        phrase3.call(person);
+        // rdv 14h08 
+    </script>
+</body>
+</html>

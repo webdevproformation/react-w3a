@@ -1,0 +1,6 @@
+.nombre{
+    transition: font-size 1s;
+}
+.nombre:hover{
+    font-size: 5em;
+}

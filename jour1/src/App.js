@@ -4,6 +4,7 @@ import Premier from "./Premier" ; // une fois créé vous allez l'importer votre
 import  Deuxieme  from "./Deuxieme";
 import Troisieme from "./Troisieme";
 import Quatrieme from './Quatrieme';
+import Cinquieme from './Cinquieme';
 
 function App() {
   return <div className="App">
@@ -13,6 +14,7 @@ function App() {
         <Deuxieme />
         <Troisieme />
         <Quatrieme />
+        <Cinquieme />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           je modifie le texte 

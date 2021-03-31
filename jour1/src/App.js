@@ -2,14 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import Menu from "./composants/menu/Menu";
 import Compteurs from "./composants/body/Compteurs";
-import Like from "./composants/commun/Like" ;
+import Articles from "./composants/body/Articles" ;
 
 function App() {
   return <div className="App">
       <Menu />
       <Compteurs />
       <hr />
-      <Like />
+      <Articles />
     </div>
   ;
 }

@@ -4,7 +4,7 @@ import "./Like.css" ;
 
 class Like extends Component {
     state = { 
-        nombre : 0 ,
+        nombre : this.props.nombre ,
         class : "",
         style : { 
             width : "40px" ,
@@ -13,10 +13,11 @@ class Like extends Component {
         }
     }
 
-    augmenter = () => {
-        this.setState({
+    augmenter = (data) => {
+        /* this.setState({
             nombre : this.state.nombre + 1
-        })
+        }) */
+        this.props.augmenter(data)
     }
 
     modifStyle = () => {
@@ -31,7 +32,7 @@ class Like extends Component {
     }
 
     changement = () => {
-        if(this.state.class == "" ){
+        if(this.state.class ){
             this.setState({
                 class : "big"
             })
@@ -48,13 +49,19 @@ class Like extends Component {
                 <img 
                     src={like} 
                     alt="" 
-                    onClick={this.augmenter} 
+                    onClick={ () => this.props.augmenter(this.props)} 
                     style={ this.state.style } 
-                    onMouseEnter={this.modifStyle}
-                    onMouseLeave={this.retourNormal}
+                  
+                    // onMouseEnter={this.modifStyle}
+                    // onMouseLeave={this.retourNormal}
                     />
-                <span>{ this.state.nombre }</span>
-                <img src={like} onClick={this.changement} className={this.state.class} alt="" />
+                <span>{ this.props.nombre }</span>
+                {
+                    /*
+                        <img src={like} onClick={this.changement} className={this.state.class} alt="" />
+                    */
+                }
+                
             </>
          );
     }

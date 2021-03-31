@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 class Compteur extends Component {
     state = { 
-        valeur : 10 
+        valeur : this.props.compteur.valeur
     }
     // solution 1 éviter la perte de contexte de this
     augmenter(){
@@ -27,6 +27,7 @@ class Compteur extends Component {
 
     misEnformeCompteur(){
         console.log(this.props.compteur); // enfant lecture seule 
+        // rdv 13h46 bon appétit !!
         console.log(this.props.largeur)
         if(this.state.valeur === 0){
             return "Zero"

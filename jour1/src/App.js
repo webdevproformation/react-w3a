@@ -1,22 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Premier from "./Premier" ; // une fois créé vous allez l'importer votre composant dans le parent ( ici composant racine )
-import  Deuxieme  from "./Deuxieme";
-import Troisieme from "./Troisieme";
-import Quatrieme from './Quatrieme';
-import Cinquieme from './Cinquieme';
-import Sixieme from './Sixieme';
 
 function App() {
   return <div className="App">
       <header className="App-header">
         <h1>Découverte React </h1>
-        <Premier /> 
-        <Deuxieme />
-        <Troisieme />
-        <Quatrieme />
-        <Cinquieme />
-        <Sixieme />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           je modifie le texte 

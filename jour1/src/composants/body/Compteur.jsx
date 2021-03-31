@@ -31,10 +31,11 @@ class Compteur extends Component {
         //console.log(this.props.compteur); // enfant lecture seule 
         // rdv 13h46 bon appétit !!
         //console.log(this.props.largeur)
-        if(this.props.compteur.valeur === 0){
-            return "Zero"
+        const {valeur}= this.props.compteur ;
+        if(valeur === 0){
+            return "Zero" ;
         }
-        return this.props.compteur.valeur ;
+        return valeur ;
     }
 
     info = (param) => {

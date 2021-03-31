@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [ 
+            {id : 2 , valeur : 4},
+            {id : 3 , valeur : 4},
+            {id : 6 , valeur : 4},
+            {id : 1 , valeur : 3}
+        ];
+
+        //je veux augmenter la valeur du 2ème item dans le tableau a 
+
+        a[1].valeur++ ;
+
+        console.log(a);
+
+        // je veux augmenter la valeur de l'élément qui a l'id = 1
+
+        // 1 recherche dans la tableau 
+
+        let resultat = a.find( function( item ){  
+            return item.id === 1 ;
+        } );
+
+        console.log(resultat);
+
+        let index = a.indexOf(resultat)
+
+        console.log(index);
+
+        a[index].valeur++ ;
+
+        console.log(a);
+    </script>
+</body>
+</html>

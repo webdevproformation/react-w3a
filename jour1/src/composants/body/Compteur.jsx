@@ -28,13 +28,13 @@ class Compteur extends Component {
     }
 
     misEnformeCompteur(){
-        console.log(this.props.compteur); // enfant lecture seule 
+        //console.log(this.props.compteur); // enfant lecture seule 
         // rdv 13h46 bon appétit !!
-        console.log(this.props.largeur)
-        if(this.state.valeur === 0){
+        //console.log(this.props.largeur)
+        if(this.props.compteur.valeur === 0){
             return "Zero"
         }
-        return this.state.valeur ;
+        return this.props.compteur.valeur ;
     }
 
     info = (param) => {

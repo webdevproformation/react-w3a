@@ -18,6 +18,10 @@ class Articles extends Component {
             articles : cloneArticles
         });
     }
+
+    componentDidMount() {
+        console.log("le composant articles est chargé dans le DOM")
+    }
     
     render() { 
         return ( 

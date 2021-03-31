@@ -43,7 +43,12 @@ class Like extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log("le composant like est affiché dans le DOM ")
+    }
+
     render() { 
+        console.log("render like")
         return ( 
             <>
                 <img 

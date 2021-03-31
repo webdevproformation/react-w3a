@@ -5,10 +5,22 @@ lorsque un composant s'afficher à l'écran react met à disposition du dévelop
 Etape Mount 
     => toutes les étapes de la création du composant => jusqu'à son affichage à l'écran 
 
-
+    constructor(){}
+    render(){ }
+    componentDidMount() {
+        // => mettre à jour le state du composant pour mettre à jour asynchrone (AXIOS)
+    } // 1 seule fois au moment de la création du composant 
+    cdm
 
 Etape Update
     => si les valeurs  state (dans le composant) ou les props du parent vers enfant
 
+    render() { }
+    componentDidUpdate(){ }
+
 Etape UnMount
     => toutes les étapes qui vont permettre de supprimer le composant du DOM 
+
+    componentWillUnmount() { }
+
+    malik.h@webdevpro.net

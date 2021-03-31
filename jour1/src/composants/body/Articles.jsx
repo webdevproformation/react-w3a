@@ -18,6 +18,7 @@ class Articles extends Component {
             articles : cloneArticles
         });
     }
+    
     render() { 
         return ( 
             <div className="articles">

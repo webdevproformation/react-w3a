@@ -1,0 +1,3 @@
+React à introduit des Hooks depuis la version 16.8.0, ils donnent par exemple la possibilité de gérer les states directement dans une fonction. Les Hooks permettent de rendre le code plus modulable et plus performant.
+
+Les Hooks permettent d'introduire la programmation fonctionnelle.

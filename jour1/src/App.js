@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import Menu from "./composants/menu/Menu";
-import Compteur from "./composants/body/Compteur";
+import Compteurs from "./composants/body/Compteurs";
 import Like from "./composants/commun/Like" ;
 
 function App() {
   return <div className="App">
       <Menu />
-      <Compteur />
+      <Compteurs />
       <hr />
       <Like />
     </div>

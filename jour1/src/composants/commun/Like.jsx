@@ -1,9 +1,11 @@
 import { Component } from 'react';
 import like from "./like.svg";
+import "./Like.css" ;
 
 class Like extends Component {
     state = { 
         nombre : 0 ,
+        class : "",
         style : { 
             width : "40px" ,
             height : "40px",
@@ -28,6 +30,18 @@ class Like extends Component {
         })
     }
 
+    changement = () => {
+        if(this.state.class == "" ){
+            this.setState({
+                class : "big"
+            })
+        }else {
+            this.setState({
+                class : ""
+            })
+        }
+    }
+
     render() { 
         return ( 
             <>
@@ -40,6 +54,7 @@ class Like extends Component {
                     onMouseLeave={this.retourNormal}
                     />
                 <span>{ this.state.nombre }</span>
+                <img src={like} onClick={this.changement} className={this.state.class} alt="" />
             </>
          );
     }

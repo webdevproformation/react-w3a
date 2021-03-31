@@ -1,0 +1,33 @@
+dans le dossier src/composants/body 
+
+créer un nouveau composant Articles 
+
+state = {
+    [
+        {id : 1 , titre : "article 1" , contenu : "lorem ipsum" , like : 3},
+        {id : 2 , titre : "article 2" , contenu : "lorem ipsum" , like : 0},
+    ]
+}
+
+augmenter le nombre de Like 
+
+ce composant va appeler un composant enfant 
+
+-------------------
+
+Article (sfc)
+importer le composant Like src/composants/commun 
+
+function => Parent 
+
+=> vu 
+    <article>
+        <h2>titre du Parent</h2>
+        <p>contenu du Parent</p>
+        <Like valeur="nb-likeparent">
+    </article>
+
+------ 
+
+Like (adapter)
+    quand vous cliquer sur l'image => déclencher Action Article 

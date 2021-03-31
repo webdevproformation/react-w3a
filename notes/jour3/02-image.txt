@@ -2,4 +2,44 @@ ajouter des images dans react
 
 il existe deux manières 
 
+
 créer un composant dans le dossier Logo
+
+1ère manière 
+
+ajouter des image directement dans src 
+import image from "./nom-fichier/.jpg"
+
+<img src={image} alt="" />
+
+----------------- 
+
+2ème manière de faire 
+
+// http://via.placeholder.com/100x50?text=societe
+
+télécharger => public/img 
+renommer l'image societe.png
+
+Dans la composant Logo 
+Commenter l'import // import logo from "./logo.png"
+
+<img src="img/societe.png" alt="" />
+
+
+cas pratique 
+
+dans le dossier src/composants créer un nouvel dossier commun
+
+Like 
+
+state 
+    propriete nombre initialisée à la valeur 0 
+
+vue (render)
+
+    image 40x40 (forme de pouce vers le haut)
+    https://icons.getbootstrap.com/icons/hand-thumbs-up/
+    span qui contient le nombre de like 
+
+si vous cliquez sur l'image 40x40 ça fait augmenter le nombre de like 

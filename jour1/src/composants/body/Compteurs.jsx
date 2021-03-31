@@ -34,6 +34,17 @@ class Compteurs extends Component {
 
     }
 
+    diminuer = (data) => {
+        // clone le state
+        const cloneCompteur = [...this.state.compteurs];
+        const resultat = cloneCompteur.find( item => item.id === data.id );
+        const index = cloneCompteur.indexOf(resultat);
+        cloneCompteur[index].valeur--;
+        this.setState({
+            compteur : cloneCompteur
+        });
+    }
+
     render() { 
         return ( 
             <>
@@ -41,7 +52,8 @@ class Compteurs extends Component {
                                 <Compteur 
                                     key={index} 
                                     compteur={item} 
-                                    augmenter={this.augmenter} />  )}
+                                    augmenter={this.augmenter} 
+                                    diminuer={this.diminuer} />  )}
             </>
 
          );

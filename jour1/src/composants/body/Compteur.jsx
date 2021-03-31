@@ -3,7 +3,7 @@ import { Component } from 'react';
 class Compteur extends Component {
     state = { 
         valeur : this.props.compteur.valeur
-    }
+    } 
     // solution 1 éviter la perte de contexte de this
     augmenter( data ){
         // alert("j'ai cliqué sur le bouton +");
@@ -22,9 +22,10 @@ class Compteur extends Component {
         console.log("je viens de rentrer dans le bouton +");
     }
     // solution 2 éviter la perte de contexte de this 
-    diminuer = () => {
-        console.log(this.state.valeur);
-        this.setState({ valeur : this.state.valeur - 1 });
+    diminuer = (data) => {
+        //console.log(this.state.valeur);
+        //this.setState({ valeur : this.state.valeur - 1 });
+        this.props.diminuer(data);
     }
 
     misEnformeCompteur(){
@@ -50,7 +51,7 @@ class Compteur extends Component {
                     { this.misEnformeCompteur() }
                 </span>
                 <button onClick={ () => { this.augmenter( this.props.compteur ) } } onMouseEnter={this.passage}>+</button>
-                <button onClick={this.diminuer}>-</button>
+                <button onClick={() => { this.diminuer( this.props.compteur )}}>-</button>
                 <button onClick={ () => { this.info( "une information" ) }}>information</button>
             </div>
         );

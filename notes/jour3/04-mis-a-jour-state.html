@@ -38,6 +38,24 @@
         a[index].valeur++ ;
 
         console.log(a);
+
+        let b = [1, 2];
+        let c = [...b] ; // adresse de b dans c => 
+
+        b.push("bonjour" );
+        console.log(c); // passage par référence 
+        // tableau en js Mutable 
+
+        let e = { id : 1}
+        let f = {...e} ;
+
+        e.prenom = "Alain";
+        console.log(f);
     </script>
 </body>
 </html>
+
+<!-- 
+    clone le state 
+    https://www.freecodecamp.org/news/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5/
+-->

@@ -1,0 +1,5 @@
+ajouter des images dans react 
+
+il existe deux manières 
+
+créer un composant dans le dossier Logo

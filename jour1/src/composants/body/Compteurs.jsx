@@ -10,11 +10,20 @@ class Compteurs extends Component {
             { id : 4 , valeur : 5 }
         ]
     }
+
+    augmenter = ( data ) => {
+        console.log("augmenter dans le composant Parent");
+        console.log(data);
+    }
+
     render() { 
         return ( 
             <>
                 { this.state.compteurs.map( ( item , index) => 
-                                                <Compteur key={index} compteur={item} />  )}
+                                <Compteur 
+                                    key={index} 
+                                    compteur={item} 
+                                    augmenter={this.augmenter} />  )}
             </>
 
          );

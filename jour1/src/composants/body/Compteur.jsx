@@ -5,15 +5,17 @@ class Compteur extends Component {
         valeur : this.props.compteur.valeur
     }
     // solution 1 éviter la perte de contexte de this
-    augmenter(){
+    augmenter( data ){
         // alert("j'ai cliqué sur le bouton +");
         // console.log(this);
         // this.state.valeur++; 
         /* let valeur = this.state.valeur ; */
         /* let that = this; */
-        this.setState({
+       /*  this.setState({
             valeur : this.state.valeur + 1 
-        })
+        }) */
+        // appel une méthode qui est stockée dans le parent 
+        this.props.augmenter( data );
     }
 
     passage(){
@@ -42,11 +44,11 @@ class Compteur extends Component {
 
     render() { 
         return ( 
-            <div className="compteur">
+            <div className="compteur" style={{ padding: "0.2em 0" }}>
                 <span> 
                     { this.misEnformeCompteur() }
                 </span>
-                <button onClick={this.augmenter.bind(this)} onMouseEnter={this.passage}>+</button>
+                <button onClick={ () => { this.augmenter( this.props.compteur ) } } onMouseEnter={this.passage}>+</button>
                 <button onClick={this.diminuer}>-</button>
                 <button onClick={ () => { this.info( "une information" ) }}>information</button>
             </div>

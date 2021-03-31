@@ -26,6 +26,8 @@ class Compteur extends Component {
     }
 
     misEnformeCompteur(){
+        console.log(this.props.compteur); // enfant lecture seule 
+        console.log(this.props.largeur)
         if(this.state.valeur === 0){
             return "Zero"
         }

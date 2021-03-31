@@ -6,7 +6,7 @@ class Compteurs extends Component {
     render() { 
         return ( 
             <>
-                <Compteur />
+                <Compteur compteur="12" largeur="30" />
                 <Compteur />
                 <Compteur />
                 <Compteur />
